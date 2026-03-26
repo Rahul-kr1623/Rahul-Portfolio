@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Light mode */
+    --background: 210 40% 98%;
+    --foreground: 215 25% 27%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 215 25% 27%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 25% 27%;
+
+    --primary: 221 83% 53%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 215 20% 92%;
+    --secondary-foreground: 215 25% 27%;
+
+    --muted: 215 20% 92%;
+    --muted-foreground: 215 16% 47%;
+
+    --accent: 221 83% 53%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 215 20% 88%;
+    --input: 215 20% 88%;
+    --ring: 221 83% 53%;
+
+    --radius: 0.75rem;
+
+    /* Portfolio specific */
+    --surface: 0 0% 100%;
+    --surface-hover: 215 20% 96%;
+    --heading: 215 28% 17%;
+    --body-text: 215 16% 47%;
+    --accent-blue: 221 83% 53%;
+    --glow: 221 83% 53%;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark mode */
+    --background: 222 47% 8%;
+    --foreground: 215 20% 75%;
+
+    --card: 222 38% 11%;
+    --card-foreground: 215 20% 75%;
+
+    --popover: 222 38% 11%;
+    --popover-foreground: 215 20% 75%;
+
+    --primary: 217 91% 60%;
+    --primary-foreground: 222 47% 8%;
+
+    --secondary: 222 30% 15%;
+    --secondary-foreground: 215 20% 75%;
+
+    --muted: 222 30% 15%;
+    --muted-foreground: 215 16% 56%;
+
+    --accent: 217 91% 60%;
+    --accent-foreground: 222 47% 8%;
+
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 215 20% 75%;
+
+    --border: 222 30% 18%;
+    --input: 222 30% 18%;
+    --ring: 217 91% 60%;
+
+    /* Portfolio specific */
+    --surface: 222 38% 11%;
+    --surface-hover: 222 30% 15%;
+    --heading: 0 0% 100%;
+    --body-text: 215 20% 65%;
+    --accent-blue: 217 91% 60%;
+    --glow: 217 91% 60%;
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: hsl(var(--heading));
+  }
+
+  p, span, li {
+    color: hsl(var(--body-text));
+  }
+}
+
+@layer utilities {
+  .glass {
+    background: hsl(var(--surface) / 0.6);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid hsl(var(--border) / 0.5);
+  }
+
+  .glass-strong {
+    background: hsl(var(--surface) / 0.85);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid hsl(var(--border) / 0.6);
+  }
+
+  .text-accent {
+    color: hsl(var(--accent-blue));
+  }
+
+  .bg-surface {
+    background-color: hsl(var(--surface));
+  }
+
+  .text-heading {
+    color: hsl(var(--heading));
+  }
+
+  .text-body {
+    color: hsl(var(--body-text));
+  }
+
+  .glow-blue {
+    box-shadow: 0 0 20px hsl(var(--glow) / 0.3), 0 0 40px hsl(var(--glow) / 0.1);
+  }
+
+  .section-padding {
+    @apply py-24 px-6 md:px-12 lg:px-20;
+  }
+
+  .mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  .gradient-text {
+    background: linear-gradient(135deg, hsl(var(--accent-blue)), hsl(200 80% 60%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
