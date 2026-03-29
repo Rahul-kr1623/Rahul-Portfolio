@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ExternalLink, Github, ArrowUpRight } from "lucide-react";
+import { Github, ArrowUpRight } from "lucide-react";
 
 export interface ProjectData {
   title: string;
@@ -73,8 +73,8 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
         </div>
 
         {/* Links */}
-        <div className="flex items-center gap-3">
-          {project.github && (
+        <div className="flex items-center justify-between mt-auto">
+          {project.github ? (
             <a
               href={project.github}
               target="_blank"
@@ -82,30 +82,29 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
               aria-label={`View ${project.title} on GitHub`}
               className="flex items-center gap-1.5 text-xs font-medium text-body-text hover:text-accent-blue transition-colors"
             >
-              <Github className="w-3.5 h-3.5" />
-              Code
+              <Github className="w-4 h-4" />
+              <span>Source Code</span>
             </a>
+          ) : (
+            <div /> 
           )}
+
           {project.live && (
             <a
               href={project.live}
               target="_blank"
               rel="noopener noreferrer"
-              aria-label={`View ${project.title} live`}
-              className="flex items-center gap-1.5 text-xs font-medium text-accent-blue hover:underline transition-colors"
+              aria-label={`Visit ${project.title} live site`}
             >
-              <ExternalLink className="w-3.5 h-3.5" />
-              Live Demo
+              <motion.div
+                whileHover={{ x: 2, y: -2 }}
+                whileTap={{ scale: 0.95 }}
+                className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center text-accent-blue group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-200 shadow-sm"
+              >
+                <ArrowUpRight className="w-5 h-5" />
+              </motion.div>
             </a>
           )}
-          <div className="ml-auto">
-            <motion.div
-              whileHover={{ x: 2, y: -2 }}
-              className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center text-accent-blue group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-200"
-            >
-              <ArrowUpRight className="w-4 h-4" />
-            </motion.div>
-          </div>
         </div>
       </div>
     </motion.article>

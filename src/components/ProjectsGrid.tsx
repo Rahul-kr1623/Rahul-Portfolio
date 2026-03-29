@@ -15,15 +15,14 @@ const projects: ProjectData[] = [
     badgeColor: "bg-blue-500/20 text-blue-400 border-blue-400/20",
   },
   {
-    title: "Jhalak '26 QR Ticketing",
-    description: "Automated event entry system for university fest",
+    title: "Project QLess (SaaS)",
+    description: "Digital event management and QR ticketing system",
     longDescription:
-      "Built an end-to-end QR ticketing and scanning system for the Jhalak '26 event. Automated the generation and emailing of QR codes, ensuring seamless and fast entry for hundreds of students.",
-    technologies: ["JavaScript", "Google Apps Script", "HTML", "CSS"],
-    // YAHAN FIX KIYA HAI: .png se .jpg kar diya hai tere screenshot ke hisaab se
-    image: "/projects/jhalak.jpg", 
-    github: "#", 
-    live: "#",
+      "A scalable SaaS solution designed for university clubs to manage event registrations and digital check-ins. This system was successfully implemented during the 'Jhalak '26' fest, where it seamlessly managed entries for 350+ students with automated QR generation and scanning.",
+    technologies: ["React", "Tailwind CSS", "App Script", "Vite"],
+    image: "/projects/qless.jpg", 
+    github: "https://github.com/Rahul-kr1623/QLess-Frontend", 
+    live: "https://qlessvitb.vercel.app/",
     badge: "Production",
     badgeColor: "bg-green-500/20 text-green-400 border-green-400/20",
   },
@@ -55,8 +54,8 @@ const projects: ProjectData[] = [
 
 export function ProjectsGrid() {
   return (
-    <section id="projects" className="section-padding bg-background">
-      <div className="max-w-6xl mx-auto pl-10 md:pl-16 lg:pl-24">
+    <section id="projects" className="section-padding bg-background overflow-hidden">
+      <div className="max-w-7xl mx-auto px-6 md:px-12 lg:pl-32 lg:pr-12">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -75,7 +74,7 @@ export function ProjectsGrid() {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <ProjectCard key={project.title} project={project} index={index} />
           ))}
