@@ -6,7 +6,7 @@ const education = [
     institution: "VIT Bhopal University",
     degree: "B.Tech in Computer Science & Engineering",
     period: "2024 – 2028",
-    details: "Current CGPA: 8.0+ | Core focus: Web Technologies, Data Structures, Algorithms",
+    details: "Current CGPA: 8.45 | Core focus: Web Technologies, Data Structures, Algorithms",
     icon: GraduationCap,
   },
   {
@@ -26,6 +26,17 @@ const education = [
 ];
 
 const experience = [
+  {
+    role: "Front End Software Intern",
+    company: "GNB Motors Pvt. Ltd.",
+    period: "May 2026 – Present",
+    points: [
+      "Actively contributing to the modernization of the corporate dashboard UI, focusing on creating fluid, user-centric interfaces and responsive components.",
+      "Collaborating with the technical team to engineer a global dynamic theme system and centralize data formatting for platform-wide consistency.",
+      "Gaining hands-on experience with professional software development workflows, including optimizing Vite production builds and maintaining strict code quality standards."
+    ],
+    icon: Briefcase,
+  },
   {
     role: "Core Tech Team Member",
     company: "Gangabhumi Club – VIT Bhopal",

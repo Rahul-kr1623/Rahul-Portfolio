@@ -3,11 +3,47 @@ import { ProjectCard, ProjectData } from "./ProjectCard";
 
 const projects: ProjectData[] = [
   {
+    title: "Project QLess (SaaS)",
+    description: "Digital event management and QR ticketing system",
+    longDescription:
+      "A scalable SaaS solution designed for university clubs to manage event registrations and digital check-ins. Implemented during the 'Jhalak '26' fest, managing entries for 350+ students with automated QR generation and scanning.",
+    technologies: ["React", "Node.js", "Supabase", "Tailwind CSS"],
+    image: "/projects/qless.png",
+    github: "https://github.com/teamqless/QLess",
+    live: "https://teamqless.vercel.app/",
+    badge: "Production",
+    badgeColor: "bg-green-500/20 text-green-400 border-green-400/20",
+  },
+  {
+    title: "IPL 2026 Dashboard",
+    description: "Live score scraper and player comparison dashboard",
+    longDescription:
+      "A real-time data visualization tool for IPL 2026, featuring automated live score scraping and a robust comparison engine for player statistics. Currently designed for immediate match insights, with a roadmap to scale this into a comprehensive multi-season analytics platform.",
+    technologies: ["React", "Node.js", "Axios", "Chart.js"],
+    image: "/projects/ipl-2026.png",
+    github: "https://github.com/Rahul-kr1623/IPL",
+    live: "https://ipl2026t20.vercel.app/",
+    badge: "Data-Driven",
+    badgeColor: "bg-orange-500/20 text-orange-400 border-orange-400/20",
+  },
+  {
+    title: "Ghost Protocol",
+    description: "Identity-focused hackathon project",
+    longDescription:
+      "Developed during VibeHack, this privacy-centric platform focuses on secure, real-time identity verification. By leveraging WebSockets, it facilitates low-latency, bidirectional communication, ensuring secure user interactions and data handling in a high-stakes hackathon environment.",
+    technologies: ["React", "Firebase", "Socket.io", "Tailwind CSS"],
+    image: "/projects/ghost-protocol.png",
+    github: "https://github.com/Rahul-kr1623/Ghost-Frontend",
+    live: "https://ghostidentity.vercel.app/",
+    badge: "Hackathon",
+    badgeColor: "bg-gray-500/20 text-gray-400 border-gray-400/20",
+  },
+  {
     title: "Black Diamond Motors UI",
     description: "Modern UI for a Trailer Carrier Manufacturing Company",
     longDescription:
       "Developed a clean and responsive UI prototype for Black Diamond Motors, a heavy-duty trailer and carrier manufacturer. Focused on professional corporate aesthetics, product showcasing, and lead generation.",
-    technologies: ["React", "Tailwind CSS", "Framer Motion", "UI/UX"], 
+    technologies: ["React", "Tailwind CSS", "Framer Motion", "UI/UX"],
     image: "/projects/black-diamond.png",
     github: "https://github.com/Rahul-kr1623/Black-Diamond-Motors",
     live: "https://blackdiamondmotors.vercel.app/",
@@ -15,35 +51,11 @@ const projects: ProjectData[] = [
     badgeColor: "bg-blue-500/20 text-blue-400 border-blue-400/20",
   },
   {
-    title: "Project QLess (SaaS)",
-    description: "Digital event management and QR ticketing system",
-    longDescription:
-      "A scalable SaaS solution designed for university clubs to manage event registrations and digital check-ins. This system was successfully implemented during the 'Jhalak '26' fest, where it seamlessly managed entries for 350+ students with automated QR generation and scanning.",
-    technologies: ["React", "Tailwind CSS", "App Script", "Vite"],
-    image: "/projects/qless.jpg", 
-    github: "https://github.com/Rahul-kr1623/QLess-Frontend", 
-    live: "https://qlessvitb.vercel.app/",
-    badge: "Production",
-    badgeColor: "bg-green-500/20 text-green-400 border-green-400/20",
-  },
-  {
-    title: "Gangabhumi Official Website",
-    description: "Official club website for VIT Bhopal students",
-    longDescription:
-      "Developed the official frontend interface for the Gangabhumi Club, a cultural hub for students from UP, Bihar, and Jharkhand. Designed a responsive layout to showcase club events, gallery, and technical initiatives.",
-    technologies: ["HTML", "CSS", "JavaScript"],
-    image: "/projects/gangabhumi.png",
-    github: "https://github.com/Ganga-Bhumi-Club-VITB/Website",
-    live: "https://gbcvitb.vercel.app/",
-    badge: "Live",
-    badgeColor: "bg-green-500/20 text-green-400 border-green-400/20",
-  },
-  {
     title: "VIT Bhopal Digital Album",
     description: "Interactive polaroid-style digital gallery",
     longDescription:
       "A nostalgic, interactive digital photo album capturing memories from campus life at VIT Bhopal. This project simulates the feeling of a physical desk scattered with polaroid photos, allowing users to drag, shuffle, and explore their memories in a unique way.",
-    technologies: ["HTML", "CSS", "JavaScript"], 
+    technologies: ["HTML", "CSS", "JavaScript"],
     image: "/projects/digital-album.png",
     github: "https://github.com/Rahul-kr1623/VIT-Bhopal-Digital-Album",
     live: "https://digitalalbumvitb.vercel.app/",

@@ -1,20 +1,24 @@
 import { motion } from "framer-motion";
+import { 
+  SiHtml5, SiCss, SiJavascript, SiReact, SiTailwindcss, 
+  SiRedux, SiNextdotjs, SiGit 
+} from "react-icons/si";
 
 interface Skill {
   name: string;
   level: number;
-  icon: string;
+  icon: JSX.Element;
 }
 
 const skills: Skill[] = [
-  { name: "HTML & CSS", level: 85, icon: "🌐" },
-  { name: "JavaScript", level: 75, icon: "🟨" },
-  { name: "React.js", level: 65, icon: "⚛️" },
-  { name: "Tailwind CSS", level: 70, icon: "🎨" },
-  { name: "Next.js", level: 50, icon: "▲" }, // Naya add kiya (Realistic learning phase)
-  { name: "Redux Toolkit", level: 55, icon: "🔄" }, // Naya add kiya
-  { name: "Google Apps Script", level: 60, icon: "📜" }, 
-  { name: "Git & GitHub", level: 70, icon: "🐙" },
+  { name: "HTML", level: 90, icon: <SiHtml5 className="text-orange-500" /> },
+  { name: "CSS", level: 85, icon: <SiCss className="text-blue-500" /> },
+  { name: "JavaScript", level: 80, icon: <SiJavascript className="text-yellow-400" /> },
+  { name: "React.js", level: 75, icon: <SiReact className="text-cyan-400" /> },
+  { name: "Tailwind CSS", level: 70, icon: <SiTailwindcss className="text-teal-400" /> },
+  { name: "Redux Toolkit", level: 65, icon: <SiRedux className="text-purple-500" /> },
+  { name: "Next.js", level: 45, icon: <SiNextdotjs className="text-white" /> },
+  { name: "Git & GitHub", level: 80, icon: <SiGit className="text-red-500" /> },
 ];
 
 const tools = [
@@ -32,6 +36,7 @@ function SkillBar({ skill, index }: { skill: Skill; index: number }) {
     >
       <div className="flex items-center justify-between mb-2.5">
         <div className="flex items-center gap-2">
+          {/* Icon rendering */}
           <span className="text-lg">{skill.icon}</span>
           <span className="text-sm font-semibold text-heading">{skill.name}</span>
         </div>
@@ -72,14 +77,12 @@ export function SkillsSection() {
           </p>
         </motion.div>
 
-        {/* Yahan wapas lg:grid-cols-4 kar diya hai 8 items ke liye */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
           {skills.map((skill, index) => (
             <SkillBar key={skill.name} skill={skill} index={index} />
           ))}
         </div>
 
-        {/* Tools & Other */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

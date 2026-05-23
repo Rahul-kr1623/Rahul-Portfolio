@@ -210,7 +210,7 @@ export function Hero() {
                 <Github className="w-4 h-4" />
               </a>
               <a
-                href="https://www.linkedin.com/in/rahul-kumar-1623"
+                href="https://www.linkedin.com/in/rahulkumar-web/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"

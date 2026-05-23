@@ -116,9 +116,9 @@ export function ResumeSection() {
 
               <div className="grid grid-cols-3 gap-3 text-center">
                 {[
-                  { label: "Projects", value: "4+" },
+                  { label: "Projects", value: "10+" },
                   { label: "Technologies", value: "8+" },
-                  { label: "CGPA", value: "8.0+" }, // Update this if needed!
+                  { label: "CGPA", value: "8.45" }, // Update this if needed!
                 ].map((stat) => (
                   <div key={stat.label} className="glass rounded-xl py-4">
                     <p className="text-2xl font-extrabold text-accent-blue">{stat.value}</p>
