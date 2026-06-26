@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { 
-  SiHtml5, SiCss, SiJavascript, SiReact, SiTailwindcss, 
-  SiRedux, SiNextdotjs, SiGit 
+  SiHtml5, SiCss, SiJavascript, SiTypescript, SiReact, 
+  SiTailwindcss, SiRedux 
 } from "react-icons/si";
 
 interface Skill {
@@ -11,18 +11,18 @@ interface Skill {
 }
 
 const skills: Skill[] = [
-  { name: "HTML", level: 90, icon: <SiHtml5 className="text-orange-500" /> },
-  { name: "CSS", level: 85, icon: <SiCss className="text-blue-500" /> },
-  { name: "JavaScript", level: 80, icon: <SiJavascript className="text-yellow-400" /> },
-  { name: "React.js", level: 75, icon: <SiReact className="text-cyan-400" /> },
-  { name: "Tailwind CSS", level: 70, icon: <SiTailwindcss className="text-teal-400" /> },
-  { name: "Redux Toolkit", level: 65, icon: <SiRedux className="text-purple-500" /> },
-  { name: "Next.js", level: 45, icon: <SiNextdotjs className="text-white" /> },
-  { name: "Git & GitHub", level: 80, icon: <SiGit className="text-red-500" /> },
+  { name: "HTML", level: 95, icon: <SiHtml5 className="text-orange-500" /> },
+  { name: "CSS", level: 90, icon: <SiCss className="text-blue-500" /> },
+  { name: "JavaScript", level: 90, icon: <SiJavascript className="text-yellow-400" /> },
+  { name: "TypeScript", level: 85, icon: <SiTypescript className="text-blue-500" /> },
+  { name: "React.js", level: 85, icon: <SiReact className="text-cyan-400" /> },
+  { name: "Redux Toolkit", level: 80, icon: <SiRedux className="text-purple-500" /> },
+  { name: "Tailwind CSS", level: 90, icon: <SiTailwindcss className="text-teal-400" /> },
 ];
 
 const tools = [
-  "VS Code", "Vite", "Framer Motion", "Vercel", "npm", "Responsive Design", "REST APIs"
+  "Git & GitHub", "Socket.IO", "Vite", "Vercel", "Render",
+  "Supabase", "VS Code", "RBAC", "Web Performance"
 ];
 
 function SkillBar({ skill, index }: { skill: Skill; index: number }) {

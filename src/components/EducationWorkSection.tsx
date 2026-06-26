@@ -31,9 +31,11 @@ const experience = [
     company: "GNB Motors Pvt. Ltd.",
     period: "May 2026 – Present",
     points: [
-      "Actively contributing to the modernization of the corporate dashboard UI, focusing on creating fluid, user-centric interfaces and responsive components.",
-      "Collaborating with the technical team to engineer a global dynamic theme system and centralize data formatting for platform-wide consistency.",
-      "Gaining hands-on experience with professional software development workflows, including optimizing Vite production builds and maintaining strict code quality standards."
+      "Architected a full-stack Role-Based Access Control (RBAC) system from scratch — backend middleware enforcing hierarchical permissions and dynamic frontend rendering that conditionally gates features by role, eliminating manual access checks across the codebase.",
+      "Designed and shipped a custom geofencing system end-to-end: interactive map UI (AddZoneDrawer) for visually drawing zones, real-time backend engine monitoring vehicle positions against boundaries, and unit tests catching edge-case alert trigger bugs.",
+      "Engineered an iOS-style sliding pill filter on the overview dashboard with optimized state management, enabling seamless day-change data filtering without hard page refreshes.",
+      "Redesigned user onboarding into a 5-step guided flow with a 3-layer Chrome extension detection mechanism and visual FleetEdge setup guides, reducing new-user friction at first run",
+      "Resolved 4+ critical UI defects including action dropdown clipping, persistent sidebar state corruption, and data-table scroll lock — each traced, root-caused, and fixed without regressions."
     ],
     icon: Briefcase,
   },

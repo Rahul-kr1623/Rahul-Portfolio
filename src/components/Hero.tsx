@@ -127,9 +127,7 @@ export function Hero() {
             {["About", "Projects", "Skills", "Resume", "Contact"].map((item) => (
               <a
                 key={item}
-                href={item === "Resume" ? "/resume.pdf" : `#${item.toLowerCase()}`}
-                target={item === "Resume" ? "_blank" : "_self"}
-                rel={item === "Resume" ? "noopener noreferrer" : ""}
+                href={`#${item.toLowerCase()}`}
                 className="text-slate-800 dark:text-slate-300 font-semibold hover:text-accent-blue transition-colors duration-200"
               >
                 {item}
