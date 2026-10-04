@@ -35,6 +35,17 @@ const involvements = [
     glowColor: "rgba(153, 27, 27, 0.4)", // dark red
     hoverClass: "group-hover:shadow-[0_0px_30px_rgba(153,27,27,0.3)] group-hover:border-red-800/50",
     scaleClass: "group-hover:scale-[1.02]",
+  },
+  {
+    id: "adobe-hackathon",
+    title: "Adobe Hackathon",
+    event: "Adobe",
+    date: "2026",
+    description: "Participated in the Adobe Hackathon.",
+    image: "/certificates/adobe.jpg",
+    glowColor: "rgba(255, 0, 0, 0.4)", // adobe red
+    hoverClass: "group-hover:shadow-[0_0px_30px_rgba(255,0,0,0.25)] group-hover:border-red-600/40",
+    scaleClass: "group-hover:scale-[1.02]",
   }
 ];
 
